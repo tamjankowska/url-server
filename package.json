@@ -15,5 +15,14 @@
   "bugs": {
     "url": "https://github.com/tamjankowska/url-server/issues"
   },
-  "homepage": "https://github.com/tamjankowska/url-server#readme"
+  "homepage": "https://github.com/tamjankowska/url-server#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "mongoose": "^5.13.7"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.12"
+  }
 }
