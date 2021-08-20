@@ -1,7 +1,10 @@
 const express = require('express')
 const cors = require('cors')
 const connection = require('./config/db.js')
+const getUrl = require('./utils/urls.js')
 require('dotenv').config()
+
+getUrl()
 
 // initialise express instance
 const app = express()
