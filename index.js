@@ -20,12 +20,13 @@ app.get('/', (req, res) => {
 }
 )
 
-// cors config
+// cors and express config
 app.use(
     cors({
         origin: [
             process.env.CLIENT_URL,
         ],
         credentials: true,
-    })
+    }),
+    express.json()
 )
