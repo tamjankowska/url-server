@@ -1,8 +1,15 @@
 const mongoose = require('mongoose')
+const { nanoid } = require('nanoid')
 
 const UrlSchema = new mongoose.Schema({
-    urlId: String,
-    shortUrl: String,
+    urlId: {
+        type: String,
+        default: nanoid(10), // ~17 years needed, in order to have a 1% probability of at least one collision with 10 characters specified 
+    },
+    prefixUrl: {
+        type: String,
+        default: 'https://www.jisc.ac.uk/',
+    },
     originalUrl: String,
     clicked: {
         type: Number, 

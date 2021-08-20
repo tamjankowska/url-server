@@ -1,10 +1,8 @@
 const express = require('express')
 const cors = require('cors')
 const connection = require('./config/db.js')
-const getUrl = require('./utils/urls.js')
+const UrlRouter = require('./routes/UrlRouter.js')
 require('dotenv').config()
-
-getUrl()
 
 // initialise express instance
 const app = express()
@@ -18,11 +16,6 @@ app.listen(port, () => {
     console.log(`Server now running on port ${port}`)
 })
 
-app.get('/', (req, res) => {
-    res.send('Here we are!')
-}
-)
-
 // cors and express config
 app.use(
     cors({
@@ -33,3 +26,6 @@ app.use(
     }),
     express.json()
 )
+
+// routes
+app.use('/', UrlRouter)
