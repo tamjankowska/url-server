@@ -1,7 +1,7 @@
 # Url shortener: server
 
 
-_The server for this small app is to be run in conjunction with the client, which can be found [here](www.github.com/tamjankowska/url-client)_
+_The server for this small app is to be run in conjunction with the client, which can be found [here](https://www.github.com/tamjankowska/url-client/)_
 
 ## _How to run the application_:
 
